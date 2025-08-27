@@ -1,0 +1,70 @@
+{
+    "name": "Audio2Text Configuration",
+    "version": "1.0.0",
+    "description": "MLX Whisper Audio Transcription System for Apple Silicon",
+    
+    "models": {
+        "whisper": {
+            "default": "large-v3-turbo",
+            "available": ["tiny", "base", "small", "medium", "large", "large-v2", "large-v3", "large-v3-turbo"],
+            "cache_dir": "models/whisper"
+        },
+        "diarization": {
+            "default": "pyannote/speaker-diarization-3.1",
+            "cache_dir": "models/diarization"
+        }
+    },
+    
+    "audio": {
+        "supported_formats": [".wav", ".mp3", ".m4a", ".flac", ".mp4", ".avi", ".mov", ".mkv"],
+        "target_sample_rate": 16000,
+        "mono": true,
+        "max_duration_minutes": 180
+    },
+    
+    "transcription": {
+        "default_language": null,
+        "enable_timestamps": true,
+        "enable_word_timestamps": true,
+        "temperature": 0.0,
+        "compression_ratio_threshold": 2.4,
+        "logprob_threshold": -1.0,
+        "no_speech_threshold": 0.6
+    },
+    
+    "output": {
+        "formats": ["txt", "json", "srt"],
+        "default_format": "txt",
+        "include_metadata": true,
+        "output_directory": "output"
+    },
+    
+    "performance": {
+        "batch_size": 16,
+        "beam_size": 5,
+        "patience": null,
+        "suppress_blank": true,
+        "suppress_tokens": [-1]
+    },
+    
+    "logging": {
+        "level": "INFO",
+        "log_directory": "logs",
+        "max_log_files": 10,
+        "max_log_size_mb": 50
+    },
+    
+    "cache": {
+        "models_cache_dir": "cache",
+        "transformers_cache_dir": "cache/transformers",
+        "huggingface_cache_dir": "cache/huggingface",
+        "mlx_cache_dir": "cache/mlx"
+    },
+    
+    "system": {
+        "required_macos_version": "11.0",
+        "required_architecture": "arm64",
+        "required_python_version": "3.11",
+        "required_disk_space_gb": 8
+    }
+}

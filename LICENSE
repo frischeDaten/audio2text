@@ -1,0 +1,131 @@
+MIT License
+
+Copyright (c) 2024 Audio2Text Project
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+================================================================================
+THIRD-PARTY LICENSES AND ATTRIBUTIONS
+================================================================================
+
+This software incorporates components from several open-source projects, each
+with their own licensing terms:
+
+1. MLX WHISPER (Apache License 2.0)
+   Copyright (c) Apple Inc.
+   Licensed under the Apache License, Version 2.0
+   https://github.com/ml-explore/mlx-examples/tree/main/whisper
+
+2. WHISPERX (BSD-4-Clause License)
+   Copyright (c) 2022, Max Bain
+   Licensed under the BSD 4-Clause "Original" or "Old" License
+   https://github.com/m-bain/whisperX
+
+3. PYTORCH (BSD 3-Clause License)
+   Copyright (c) 2016-present, Facebook Inc.
+   Licensed under the BSD 3-Clause License
+   https://github.com/pytorch/pytorch
+
+4. TRANSFORMERS (Apache License 2.0)
+   Copyright (c) 2018- The Hugging Face Team
+   Licensed under the Apache License, Version 2.0
+   https://github.com/huggingface/transformers
+
+5. PYANNOTE.AUDIO (MIT License)
+   Copyright (c) 2017-2021 CNRS
+   Licensed under the MIT License
+   https://github.com/pyannote/pyannote-audio
+
+6. LIBROSA (ISC License)
+   Copyright (c) 2013--2023, librosa development team
+   Licensed under the ISC License
+   https://github.com/librosa/librosa
+
+7. SOUNDFILE (BSD 3-Clause License)
+   Copyright (c) 2013, Bastian Bechtold
+   Licensed under the BSD 3-Clause License
+   https://github.com/bastibe/python-soundfile
+
+8. NUMPY (BSD 3-Clause License)
+   Copyright (c) 2005-2023, NumPy Developers
+   Licensed under the BSD 3-Clause License
+   https://github.com/numpy/numpy
+
+9. WHISPER MODELS (MIT License)
+   The Whisper neural network models are licensed under MIT License
+   Copyright (c) 2022 OpenAI
+   https://github.com/openai/whisper
+
+10. PYANNOTE MODELS
+    Speaker diarization models from pyannote.audio may have additional
+    restrictions. Please refer to individual model licenses:
+    https://huggingface.co/pyannote/speaker-diarization-3.1
+
+================================================================================
+MODEL LICENSES AND USAGE RESTRICTIONS
+================================================================================
+
+IMPORTANT: This software downloads and uses pre-trained AI models that may have
+their own licensing terms and usage restrictions:
+
+1. OpenAI Whisper Models:
+   - Licensed under MIT License
+   - Free for commercial and non-commercial use
+   - Attribution to OpenAI required
+
+2. Pyannote Speaker Diarization Models:
+   - May require accepting specific terms on Hugging Face
+   - Some models may have commercial use restrictions
+   - Users must obtain appropriate licenses before use
+
+3. Hugging Face Transformers Models:
+   - Each model has individual licensing terms
+   - Check model cards on Hugging Face Hub before use
+   - Some models may restrict commercial usage
+
+Users are responsible for ensuring compliance with all model licenses and
+terms of use. This software provides tools to use these models but does not
+grant rights to the models themselves.
+
+================================================================================
+DISTRIBUTION REQUIREMENTS
+================================================================================
+
+When redistributing this software:
+
+1. Include this LICENSE file
+2. Preserve all copyright notices
+3. Include attribution to third-party components
+4. Ensure end users understand model licensing requirements
+5. Do not claim ownership of third-party components
+
+For commercial use, verify that all included models permit commercial usage
+or replace with commercially-licensed alternatives.
+
+================================================================================
+DISCLAIMER
+================================================================================
+
+The authors of this software are not responsible for ensuring compliance
+with third-party licenses. Users must independently verify licensing
+requirements for their specific use case, especially for commercial
+applications.
+
+For the most current licensing information, please refer to the original
+project repositories listed above.
