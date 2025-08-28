@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# Audio2Text User PKG Post-Installation Script
+set -e
+
+echo "🎙️ Audio2Text - PKG installation completed!"
+echo ""
+echo "=================================================================================="
+echo "🎙️ Audio2Text Installation Complete!"
+echo "=================================================================================="
+echo ""
+echo "The Audio2Text installer files are now available."
+echo ""
+echo "⚠️  IMPORTANT: Complete the setup by running this command in Terminal:"
+echo ""
+echo "    cd /tmp/Audio2Text-Installer && ./install.sh"
+echo ""
+echo "This will:"
+echo "  • Install Python dependencies in your home directory"
+echo "  • Set up your environment"  
+echo "  • Configure the audio2text command"
+echo "  • Download required AI models"
+echo ""
+echo "After setup completes, you can delete /tmp/Audio2Text-Installer"
+echo ""
+echo "=================================================================================="
+echo ""
+
+# Open Terminal with the command ready to run
+osascript -e 'tell application "Terminal" to do script "cd /tmp/Audio2Text-Installer && echo \"Ready to install! Run: ./install.sh\" && ls -la"' 2>/dev/null || true
+
+exit 0

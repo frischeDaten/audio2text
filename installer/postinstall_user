@@ -1,0 +1,39 @@
+#!/bin/bash
+
+# Audio2Text User PKG Post-Installation Script
+# This script runs the Audio2Text installer in user context
+
+set -e
+
+echo "🎙️ Audio2Text - PKG installation completed!"
+echo ""
+echo "=================================================================================="
+echo "🎙️ Audio2Text Installation Complete!"
+echo "=================================================================================="
+echo ""
+echo "The Audio2Text installer has been placed in your Applications folder."
+echo ""
+echo "⚠️  IMPORTANT: You need to complete the setup process!"
+echo ""
+echo "To finish installation:"
+echo "  1. Open Terminal"
+echo "  2. Run: cd ~/Applications/Audio2Text-Installer && ./install.sh"
+echo ""
+echo "Or run the installer directly from Finder:"
+echo "  1. Open Finder → Applications"
+echo "  2. Find 'Audio2Text-Installer' folder"
+echo "  3. Double-click 'install.sh' and select 'Open with Terminal'"
+echo ""
+echo "This will:"
+echo "  • Install Python dependencies"
+echo "  • Set up your environment"  
+echo "  • Configure the audio2text command"
+echo "  • Download required AI models"
+echo ""
+echo "=================================================================================="
+echo ""
+
+# Open Finder to the installer location for user convenience
+open ~/Applications/Audio2Text-Installer 2>/dev/null || true
+
+exit 0

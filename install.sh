@@ -216,30 +216,30 @@ install_python_dependencies() {
     pip install numba==0.61.2
     
     print_info "Installing MLX and MLX Whisper..."
-    pip install mlx>=0.20.0
-    pip install mlx-whisper>=0.4.0
+    pip install 'mlx>=0.20.0'
+    pip install 'mlx-whisper>=0.4.0'
     
     print_info "Installing audio processing libraries..."
-    pip install librosa>=0.10.0
-    pip install soundfile>=0.12.0
+    pip install 'librosa>=0.10.0'
+    pip install 'soundfile>=0.12.0'
     
     print_info "Installing PyTorch (CPU version for compatibility)..."
-    pip install torch>=2.0.0 torchaudio>=2.0.0
+    pip install 'torch>=2.0.0' 'torchaudio>=2.0.0'
     
     print_info "Installing speaker diarization..."
-    pip install pyannote.audio>=3.0.0
-    pip install speechbrain>=0.5.0
+    pip install 'pyannote.audio>=3.0.0'
+    pip install 'speechbrain>=0.5.0'
     
     print_info "Installing additional ML libraries..."
-    pip install transformers>=4.35.0
-    pip install huggingface-hub>=0.17.0
-    pip install requests>=2.31.0
-    pip install pandas>=2.0.0
-    pip install scipy>=1.11.0
+    pip install 'transformers>=4.35.0'
+    pip install 'huggingface-hub>=0.17.0'
+    pip install 'requests>=2.31.0'
+    pip install 'pandas>=2.0.0'
+    pip install 'scipy>=1.11.0'
     
     # Optional: WhisperX fallback
     print_info "Installing WhisperX (fallback transcription)..."
-    pip install whisperx>=3.1.0 || print_warning "WhisperX installation failed (optional)"
+    pip install 'whisperx>=3.1.0' || print_warning "WhisperX installation failed (optional)"
     
     print_success "Python dependencies installed ✓"
 }

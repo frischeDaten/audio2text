@@ -1,0 +1,62 @@
+#!/bin/bash
+
+# Audio2Text PKG Post-Installation Script
+# This script creates a launcher script that users can run after PKG installation
+
+set -e
+
+INSTALL_DIR="/usr/local/audio2text"
+
+echo "🎙️ Audio2Text - PKG installation completed!"
+
+# Create a user-friendly launcher script in /usr/local/bin
+LAUNCHER_SCRIPT="/usr/local/bin/audio2text-setup"
+
+cat > "$LAUNCHER_SCRIPT" << 'EOF'
+#!/bin/bash
+
+# Audio2Text Setup Launcher
+# This script runs the Audio2Text installer as the current user
+
+INSTALL_DIR="/usr/local/audio2text"
+
+echo "🎙️ Audio2Text Setup"
+echo "==================="
+echo ""
+echo "The Audio2Text files have been installed to $INSTALL_DIR"
+echo "Now running the setup process as your user account..."
+echo ""
+
+# Change to the install directory and run the installer
+cd "$INSTALL_DIR"
+bash "./install.sh"
+EOF
+
+# Make the launcher executable
+chmod +x "$LAUNCHER_SCRIPT"
+
+# Create a notification that directs users to run the setup
+echo ""
+echo "=================================================================================="
+echo "🎙️ Audio2Text Installation Complete!"
+echo "=================================================================================="
+echo ""
+echo "The Audio2Text files have been installed to: $INSTALL_DIR"
+echo ""
+echo "⚠️  IMPORTANT: You need to complete the setup process!"
+echo ""
+echo "To finish installation, run this command in Terminal:"
+echo "    audio2text-setup"
+echo ""
+echo "Or run directly:"
+echo "    cd $INSTALL_DIR && bash install.sh"
+echo ""
+echo "This will:"
+echo "  • Install Python dependencies"
+echo "  • Set up your environment"
+echo "  • Configure the audio2text command"
+echo ""
+echo "=================================================================================="
+echo ""
+
+exit 0
