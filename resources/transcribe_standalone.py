@@ -142,11 +142,20 @@ class Audio2TextTranscriber:
         try:
             self.logger.info("Loading speaker diarization model...")
             
-            # Load from local cache or download
+            # Check for valid local pipeline directory
             models_dir = Path.home() / "Applications" / "Audio2Text" / "models" / "diarization"
-            if models_dir.exists():
+            
+            # A valid pipeline directory should contain config.yaml and have the right structure
+            # The current local directory is not a valid pipeline, so always use HF repo
+            if (models_dir.exists() and 
+                (models_dir / "config.yaml").exists() and 
+                (models_dir / "pytorch_model.bin").exists()):
+                # Only use local if it's a complete pipeline
+                self.logger.info("Loading from local pipeline directory...")
                 self.diarization_pipeline = Pipeline.from_pretrained(str(models_dir))
             else:
+                # Load from Hugging Face repository
+                self.logger.info("Loading from Hugging Face repository...")
                 self.diarization_pipeline = Pipeline.from_pretrained(
                     "pyannote/speaker-diarization-3.1",
                     use_auth_token=os.getenv('HF_TOKEN')
